@@ -1,0 +1,50 @@
+<krpano version="1.16">
+
+        <include url="skin/defaultskin.xml" />
+
+        <view hlookat="0" vlookat="0" maxpixelzoom="1.0" fovmax="150" limitview="auto" />
+
+        <preview url="kel_407.tiles/preview.jpg" />
+
+        <image type="CUBE" multires="true" tilesize="512" progressive="false">
+                <level tiledimagewidth="2546" tiledimageheight="2546">
+                        <cube url="kel_407.tiles/mres_%s/l3/%v/l3_%s_%v_%h.jpg" />
+                </level>
+                <level tiledimagewidth="1273" tiledimageheight="1273">
+                        <cube url="kel_407.tiles/mres_%s/l2/%v/l2_%s_%v_%h.jpg" />
+                </level>
+                <level tiledimagewidth="637" tiledimageheight="637">
+                        <cube url="kel_407.tiles/mres_%s/l1/%v/l1_%s_%v_%h.jpg" />
+                </level>
+                <mobile>
+                        <cube url="kel_407.tiles/mobile_%s.jpg" />
+                </mobile>
+        </image>
+
+  
+
+<view hlookat="-24.48" vlookat="3.46" fovmin="45.33" fovmax="150.00" maxpixelzoom="1.00"
+              limitfov="false"
+              />
+
+<plugin name="logo_zu"
+    url="but_zurueck.png"
+    align="bottom"
+    x="-225"
+    y="15"
+    alpha="0.7"
+   onclick="openurl(galerie.html,_self)"
+      onover="tween(alpha,1);tween(scale,1.3);"
+     onout="tween(alpha,0.7);tween(scale,1.0);"
+      onhover=""
+    />
+
+<autorotate enabled="true"
+            waittime="6.0"
+            speed="-2"
+            horizon="0"
+            tofov="80.0"
+            />
+
+
+</krpano>
