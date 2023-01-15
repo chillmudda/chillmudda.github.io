@@ -154,7 +154,7 @@ h2 {
 h3 {
   margin-top: 0px;
   margin-bottom: 16px;
-  font-family: Inter, sans-serif;
+  font-family: Azeretmono, sans-serif;
   color: #fff;
   font-size: 26px;
   line-height: 1.4em;
@@ -322,7 +322,6 @@ blockquote {
   padding-bottom: 60px;
   background-color: #ececec;
   background-image: url('../images/oberflpatterngreen.png');
-  background-position: 0px 0px;
   background-size: auto;
   color: #4d4d4d;
 }
@@ -524,8 +523,10 @@ blockquote {
   max-width: 1400px;
   min-height: 50px;
   margin-right: auto;
+  margin-bottom: 1px;
   margin-left: auto;
   padding-right: 36px;
+  padding-bottom: 0px;
   padding-left: 36px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -739,6 +740,7 @@ blockquote {
 }
 
 .rich-text {
+  opacity: 1;
   text-align: justify;
 }
 
@@ -817,7 +819,7 @@ blockquote {
   font-style: normal;
   font-weight: 400;
   text-align: justify;
-  text-shadow: 1px 0 1px #b6b6b6, 0 -1px 1px #b6b6b6, 0 1px 1px #b6b6b6, -1px 0 1px #b6b6b6;
+  text-shadow: none;
 }
 
 .paragraph.xl {
@@ -1053,6 +1055,7 @@ blockquote {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  font-family: Azeretmono, sans-serif;
 }
 
 .vertical-tab {
@@ -1764,6 +1767,11 @@ blockquote {
   filter: brightness(110%);
 }
 
+.menu-rich-text {
+  margin-bottom: 0px;
+  text-align: justify;
+}
+
 .menu-rich-text ul {
   margin-bottom: 64px;
   padding-left: 0px;
@@ -1771,13 +1779,24 @@ blockquote {
   list-style-type: none;
 }
 
-.menu-rich-text li {
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
 .menu-rich-text h2 {
+  display: block;
   margin-bottom: 28px;
+  margin-left: 0px;
+  padding-left: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   font-family: Azeretmono, sans-serif;
   color: #fff;
   font-size: 28px;
@@ -2039,7 +2058,7 @@ blockquote {
   margin-right: auto;
   margin-left: auto;
   padding-right: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   padding-left: 40px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -2278,8 +2297,10 @@ blockquote {
 }
 
 .about-image {
+  display: inline-block;
   max-width: 100%;
   margin-bottom: 16px;
+  padding-bottom: 0px;
 }
 
 .about-grid {
@@ -2292,7 +2313,7 @@ blockquote {
 }
 
 .image-caption {
-  color: #696969;
+  color: #e9e9e3;
   font-size: 15px;
   text-align: center;
 }
@@ -2577,7 +2598,8 @@ blockquote {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: 'Azeret Mono';
+  opacity: 0.14;
+  font-family: Azeretmono, sans-serif;
   font-weight: 600;
   text-align: left;
 }
@@ -2858,6 +2880,32 @@ blockquote {
   padding-right: 0px;
 }
 
+.paragraph-3 {
+  font-family: Azeretmono, sans-serif;
+  font-size: 22px;
+  line-height: 1.4em;
+  text-align: justify;
+  text-shadow: 0 -1px 1px #b6b6b6, -1px 0 1px #b6b6b6, 0 1px 1px #b6b6b6, 1px 0 1px #b6b6b6;
+}
+
+.heading-2 {
+  display: block;
+  padding-right: 0px;
+  font-style: normal;
+  text-align: left;
+}
+
+.grid-3 {
+  grid-row-gap: 41px;
+  grid-template-areas: "Area";
+}
+
+.paragraph-4 {
+  color: #303030;
+  font-weight: 500;
+  text-align: center;
+}
+
 @media screen and (min-width: 1280px) {
   .section.hero {
     background-color: #4b6f49;
@@ -2885,6 +2933,10 @@ blockquote {
 
   .heading._2xl {
     font-size: 68px;
+  }
+
+  .menu-rich-text {
+    margin-bottom: 0px;
   }
 
   .social-icon {
@@ -3058,6 +3110,28 @@ blockquote {
     margin-left: 0px;
   }
 
+  .tabs-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  }
+
   ._2-grid {
     margin-left: 0px;
   }
@@ -3107,6 +3181,10 @@ blockquote {
   .ds-menu-button.w--open {
     border-radius: 40px;
     background-color: #184736;
+  }
+
+  .menu-rich-text {
+    margin-bottom: 0px;
   }
 
   .menu-grid {
@@ -3478,12 +3556,12 @@ blockquote {
     height: 120px;
   }
 
-  .menu-rich-text ul {
-    margin-bottom: 48px;
+  .menu-rich-text {
+    margin-bottom: 0px;
   }
 
-  .menu-rich-text li {
-    font-size: 16px;
+  .menu-rich-text ul {
+    margin-bottom: 48px;
   }
 
   .menu-grid {
@@ -3580,6 +3658,15 @@ blockquote {
     text-align: left;
   }
 
+  .text-block {
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    -ms-grid-row-align: auto;
+    align-self: auto;
+    font-size: 11px;
+    text-align: center;
+  }
+
   .section-3 {
     padding-right: 0px;
     padding-left: 0px;
@@ -3594,6 +3681,10 @@ blockquote {
   }
 
   .link-6 {
+    padding-right: 0px;
+  }
+
+  .link-7 {
     padding-right: 0px;
   }
 
@@ -3755,6 +3846,7 @@ blockquote {
   .menu-rich-text {
     display: block;
     overflow: visible;
+    margin-bottom: 0px;
     font-size: 14px;
     -o-object-fit: fill;
     object-fit: fill;
@@ -3849,7 +3941,7 @@ blockquote {
   }
 
   .link-7 {
-    padding-right: 10px;
+    padding-right: 0px;
     font-size: 12px;
   }
 
@@ -3881,6 +3973,10 @@ blockquote {
 
   .link-17 {
     font-size: 12px;
+  }
+
+  .heading-2 {
+    padding-right: 0px;
   }
 }
 
@@ -3928,7 +4024,7 @@ blockquote {
   grid-column-end: span 1;
 }
 
-#w-node-_2b496ba0-a607-fa92-da1d-62cc2e54a401-ccbdf4ed {
+#w-node-e1bde9eb-2512-8c23-38db-0fce54dd70ee-ccbdf4ed {
   -ms-grid-column: span 1;
   grid-column-start: span 1;
   -ms-grid-column-span: 1;
